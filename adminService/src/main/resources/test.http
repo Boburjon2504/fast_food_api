@@ -1,0 +1,11 @@
+POST http://localhost:8081/api/category
+Content-Type: application/json
+
+{
+  "name": "laptop",
+  "parentId": 2
+}
+
+
+
+
