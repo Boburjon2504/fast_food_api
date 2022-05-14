@@ -45,5 +45,4 @@ public class HumanController {
         Optional<Human> byId = humanRepository.findById(id);
         return ResponseEntity.ok().body(byId);
     }
-
 }
