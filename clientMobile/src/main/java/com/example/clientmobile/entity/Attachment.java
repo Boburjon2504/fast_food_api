@@ -1,6 +1,5 @@
-package com.example.couriermobile.entity;
+package com.example.clientmobile.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -22,6 +21,5 @@ public class Attachment {
     @Column(nullable = false)
     private Long size;
     @Column(nullable = false)
-    @JsonIgnore
     private byte[] bytes;
 }
