@@ -1,9 +1,6 @@
 package com.example.clientmobile.entity;
 
-import com.example.adminservice.entity.enums.ClientStatus;
-import com.example.adminservice.entity.enums.Language;
-import com.example.adminservice.entity.enums.Region;
-import com.example.adminservice.entity.enums.UserType;
+
 import com.example.clientmobile.entity.enums.ClientStatus;
 import com.example.clientmobile.entity.enums.Language;
 import com.example.clientmobile.entity.enums.Region;

@@ -2,6 +2,7 @@ package com.example.clientmobile.controller;
 
 import com.example.clientmobile.entity.Category;
 import com.example.clientmobile.entity.Product;
+import com.example.clientmobile.repository.CategoryRepository;
 import com.example.clientmobile.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Example;

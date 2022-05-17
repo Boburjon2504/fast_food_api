@@ -28,5 +28,11 @@ spring:
           predicates:
             - Path=/api/clientMobile/**
           uri: lb://CURIERMOBILE
-
+  application:
+    name: gateway
+app:
+  auth:
+    apiKey:
+      key: apiKey
+    header:
 

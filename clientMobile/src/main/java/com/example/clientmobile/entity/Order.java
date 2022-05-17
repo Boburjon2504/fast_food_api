@@ -1,7 +1,5 @@
 package com.example.clientmobile.entity;
 
-import com.example.adminservice.entity.enums.OrderStatus;
-import com.example.adminservice.entity.enums.PayType;
 import com.example.clientmobile.entity.enums.OrderStatus;
 import com.example.clientmobile.entity.enums.PayType;
 import lombok.*;

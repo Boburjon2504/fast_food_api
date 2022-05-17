@@ -9,7 +9,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
 @Entity
 public class Category {
     @Id
@@ -20,7 +19,8 @@ public class Category {
     @Column(nullable = false)
     private String name;
     private boolean active = true;
-    @ManyToOne()
+
+    @ManyToOne
     @JoinColumn
     private Category parent;
 }

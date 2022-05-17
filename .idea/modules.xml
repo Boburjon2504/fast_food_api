@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/adminService/adminService.iml" filepath="$PROJECT_DIR$/adminService/adminService.iml" />
       <module fileurl="file://$PROJECT_DIR$/clientMobile/clientMobile.iml" filepath="$PROJECT_DIR$/clientMobile/clientMobile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pdp-fastfood/clientService/clientService.iml" filepath="$PROJECT_DIR$/pdp-fastfood/clientService/clientService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clientService/clientService.iml" filepath="$PROJECT_DIR$/clientService/clientService.iml" />
       <module fileurl="file://$PROJECT_DIR$/courierMobile/courierMobile.iml" filepath="$PROJECT_DIR$/courierMobile/courierMobile.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery/discovery.iml" filepath="$PROJECT_DIR$/discovery/discovery.iml" />
       <module fileurl="file://$PROJECT_DIR$/getaway/getaway.iml" filepath="$PROJECT_DIR$/getaway/getaway.iml" />
