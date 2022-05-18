@@ -2,6 +2,7 @@ package com.example.clientmobile.controller;
 
 import com.example.clientmobile.entity.Category;
 import com.example.clientmobile.entity.Product;
+import com.example.clientmobile.mapper.ProductMapper;
 import com.example.clientmobile.repository.CategoryRepository;
 import com.example.clientmobile.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
@@ -22,16 +23,17 @@ import java.util.Optional;
 public class ProductController {
     final ProductRepository repository;
     final CategoryRepository categoryRepository;
+    final ProductMapper productMapper;
     @GetMapping("/{id}")
     public HttpEntity<?> getProduct(@PathVariable Long id){
         Optional<Product> byId = repository.findById(id);
         return ResponseEntity.ok().body(byId);
     }
 
-    @GetMapping
+    @GetMapping("/{id}/p")
     public HttpEntity<?> getProductByCategory(@PathVariable Long categoryId){
         Optional<Category> byId = categoryRepository.findById(categoryId);
        List<Product> allProducts = repository.findAll(Example.of(Product.builder().category(byId.get()).build()));
-       return ResponseEntity.ok().body(allProducts);
+       return ResponseEntity.ok().body(productMapper.toFrontDto(allProducts));
     }
 }

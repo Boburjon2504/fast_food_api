@@ -4,6 +4,7 @@ import com.example.clientservice.dto.ApiResponse;
 import com.example.clientservice.dto.HumanDto;
 import com.example.clientservice.entity.Human;
 import com.example.clientservice.mapper.HumanMapper;
+import com.example.clientservice.repository.AttachmentRepository;
 import com.example.clientservice.repository.HumanRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,8 +16,10 @@ import java.util.Optional;
 public class HumanService {
     final HumanMapper humanMapper;
     final HumanRepository humanRepository;
+    final AttachmentRepository repository;
     public ApiResponse<Human> add(HumanDto humanDto){
         Human human = humanMapper.toEntity(humanDto);
+        human.setPhoto(repository.save(human.getPhoto()));
         humanRepository.save(human);
         return ApiResponse.<Human>builder().success(true).message("added").build();
     }

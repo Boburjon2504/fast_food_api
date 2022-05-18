@@ -5,13 +5,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ApiResponse <T> {
-    @Builder.Default
-    private boolean success = true;
-    private String message;
-    private T obj;
+@Data
+@Builder
+public class AttachmentDto {
+    private String name, type, url;
+    private Long size;
 }

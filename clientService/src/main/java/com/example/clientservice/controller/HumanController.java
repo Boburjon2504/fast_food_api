@@ -21,7 +21,7 @@ public class HumanController {
     final HumanRepository humanRepository;
 
     @PostMapping
-    public HttpEntity<?> add(@RequestBody HumanDto humanDto){
+    public HttpEntity<?> add(@ModelAttribute HumanDto humanDto){
         ApiResponse<Human> add = humanService.add(humanDto);
         return ResponseEntity.ok().body("added");
     }

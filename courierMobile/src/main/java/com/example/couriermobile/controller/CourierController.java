@@ -24,6 +24,8 @@ final CurierService service;
         Optional<Human> byId = humanRepository.findById(id);
         return ResponseEntity.ok().body(byId.get().getNumber());
     }
+
+    // didnt check
     @PutMapping("/{id}")
     public HttpEntity<?> editPhoto(@PathVariable Long id, @RequestBody MultipartFile file){
         ApiResponse<Human> humanApiResponse = service.changeFoto(id, file);

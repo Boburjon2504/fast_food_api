@@ -7,5 +7,5 @@ import java.util.List;
 import java.util.Optional;
 
 public interface OrderRepository extends JpaRepository<Order,Long> {
-    Optional<Order> findByClient_Id(Long clientId);
+    List<Order> findByClient_Id(Long clientId);
 }

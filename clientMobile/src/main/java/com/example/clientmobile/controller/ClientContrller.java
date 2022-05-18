@@ -54,7 +54,7 @@ public class ClientContrller {
         ApiResponse<Human> block = humanService.block(id);
         return ResponseEntity.ok().body("blocked");
     }
-    @GetMapping("/{id}photo")
+    @GetMapping("/{id}/photo")
     public HttpEntity<?> getPhoto(@PathVariable Long id){
         Optional<Human> byId = humanRepository.findById(id);
         if (byId.isEmpty()){
